@@ -10,4 +10,5 @@ public class HotpackApplication {
 		SpringApplication.run(HotpackApplication.class, args);
 	}
 
+	//test
 }
