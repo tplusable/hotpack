@@ -9,6 +9,4 @@ public class HotpackApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HotpackApplication.class, args);
 	}
-
-	//test2
 }
