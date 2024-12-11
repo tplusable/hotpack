@@ -64,6 +64,7 @@ public class UserController {
         return "login_form";
     }
 
+    // 지금부터 버전 0 : v0
 //    @GetMapping("/userinfo")
 //    public String userinfo() {
 //        userService.getUser()
