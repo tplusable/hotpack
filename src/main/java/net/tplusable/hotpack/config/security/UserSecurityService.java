@@ -1,6 +1,8 @@
-package net.tplusable.hotpack.user;
+package net.tplusable.hotpack.config.security;
 
 import lombok.RequiredArgsConstructor;
+import net.tplusable.hotpack.entity.SiteUser;
+import net.tplusable.hotpack.repository.UserRepository;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;

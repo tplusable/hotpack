@@ -1,10 +1,13 @@
 package net.tplusable.hotpack.service;
 
 import lombok.RequiredArgsConstructor;
-import net.tplusable.hotpack.domain.SiteUser;
+import net.tplusable.hotpack.exception.DataNotFoundException;
+import net.tplusable.hotpack.entity.SiteUser;
 import net.tplusable.hotpack.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 // 생성자를 통한 bean 주입
 @RequiredArgsConstructor
@@ -26,5 +29,14 @@ public class UserService {
         // Siteuser 객체를 jpa를 이용해 db에 insert
         this.userRepository.save(user);
         return user;
+    }
+
+    public SiteUser getUser(String username) {
+        Optional<SiteUser> siteUser = this.userRepository.findByUsername(username);
+        if (siteUser.isPresent()) {
+            return siteUser.get();
+        } else {
+            throw new DataNotFoundException("siteuser not found");
+        }
     }
 }

@@ -1,4 +1,4 @@
-package net.tplusable.hotpack.user;
+package net.tplusable.hotpack.config.security;
 
 import lombok.Getter;
 

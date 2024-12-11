@@ -1,4 +1,4 @@
-package net.tplusable.hotpack.user;
+package net.tplusable.hotpack.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -18,15 +18,15 @@ public class SiteUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true, nullable = false)
+    @Column(unique = true, nullable = false, name="username")
     private String username;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name="password")
     private String password;
 
-    @Column(unique = true, nullable = false)
+    @Column(unique = true, nullable = false, name="email")
     private String email;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name="name")
     private String name;
 }

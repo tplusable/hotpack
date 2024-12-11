@@ -2,7 +2,7 @@ package net.tplusable.hotpack.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import net.tplusable.hotpack.domain.UserCreateForm;
+import net.tplusable.hotpack.dto.UserCreateForm;
 import net.tplusable.hotpack.service.UserService;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
@@ -58,4 +58,15 @@ public class UserController {
         // /로 화면 리렌더링
         return "redirect:/";
     }
+
+    @GetMapping("/login")
+    public String login() {
+        return "login_form";
+    }
+
+//    @GetMapping("/userinfo")
+//    public String userinfo() {
+//        userService.getUser()
+//        return "login_userinfo";
+//    }
 }

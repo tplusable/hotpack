@@ -1,4 +1,4 @@
-package net.tplusable.hotpack;
+package net.tplusable.hotpack.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
